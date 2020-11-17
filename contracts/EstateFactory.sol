@@ -26,14 +26,16 @@ contract EstateFactory {
             string memory  _about, string memory  _title,
             string memory _streetName, uint16 _price) public {
 
-        surface = _surface;
-        category = _category;
-        nbRoom = _nbRoom;
-        nbBedRoom = _nbBedRoom;
-        about = _about;
-        title = _title;
-        streetName = _streetName;
-        price = _price;
+        Estate memory newEstate;
+
+        newEstate.surface = _surface;
+        newEstate.category = _category;
+        newEstate.nbRoom = _nbRoom;
+        newEstate.nbBedRoom = _nbBedRoom;
+        newEstate.about = _about;
+        newEstate.title = _title;
+        newEstate.streetName = _streetName;
+        newEstate.price = _price;
 
     }
 
