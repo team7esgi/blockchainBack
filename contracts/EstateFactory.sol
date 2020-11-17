@@ -1,24 +1,28 @@
 pragma solidity >=0.4.22 <0.8.0;
 pragma experimental ABIEncoderV2;
 
-contract Estate {
+contract EstateFactory {
 
-    string  surface;
-    string category;
-    uint8 nbRoom;
-    uint8 nbBedRoom;
-    Other[] others;
-    string about;
-    string title;
-    string streetName;
-    uint16 price;
+
+    struct Estate{
+        string  surface;
+        string category;
+        uint8 nbRoom;
+        uint8 nbBedRoom;
+        Other[] others;
+        string about;
+        string title;
+        string streetName;
+        uint16 price;
+
+    }
 
     struct Other{
         string item;
         string description;
     }
 
-    constructor( string memory _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
+    function createEstate( string memory _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
             string memory  _about, string memory  _title,
             string memory _streetName, uint16 _price) public {
 
