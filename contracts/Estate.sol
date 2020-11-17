@@ -19,14 +19,13 @@ contract Estate {
     }
 
     constructor( string memory _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
-            Other[] memory  _others, string memory  _about, string memory  _title,
+            string memory  _about, string memory  _title,
             string memory _streetName, uint16 _price) public {
 
         surface = _surface;
         category = _category;
         nbRoom = _nbRoom;
         nbBedRoom = _nbBedRoom;
-        others = _others;
         about = _about;
         title = _title;
         streetName = _streetName;
