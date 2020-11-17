@@ -1,7 +1,9 @@
 pragma solidity >=0.4.22 <0.8.0;
+
+import "./Ownable.sol";
 pragma experimental ABIEncoderV2;
 
-contract EstateFactory {
+contract EstateFactory is Ownable {
 
 
     struct Estate{
@@ -33,7 +35,7 @@ contract EstateFactory {
 
     function createEstate( uint8  _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
             string memory  _about, string memory  _title,
-            Street memory _street, uint16 _price) public {
+            Street memory _street, uint16 _price) internal {
 
         Estate memory newEstate;
 
@@ -47,6 +49,9 @@ contract EstateFactory {
         newEstate.price = _price;
 
     }
+
+
+
 
 
 
