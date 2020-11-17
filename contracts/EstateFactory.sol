@@ -5,14 +5,15 @@ contract EstateFactory {
 
 
     struct Estate{
-        string  surface;
+        uint8  surface;
         string category;
         uint8 nbRoom;
         uint8 nbBedRoom;
         Other[] others;
         string about;
         string title;
-        string streetName;
+        Street street;
+
         uint16 price;
 
     }
@@ -22,9 +23,17 @@ contract EstateFactory {
         string description;
     }
 
-    function createEstate( string memory _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
+    struct Street{
+        string rue;
+        string nom;
+        string codePostale;
+        string ville;
+        string pays;
+    }
+
+    function createEstate( uint8  _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
             string memory  _about, string memory  _title,
-            string memory _streetName, uint16 _price) public {
+            Street memory _street, uint16 _price) public {
 
         Estate memory newEstate;
 
@@ -34,7 +43,7 @@ contract EstateFactory {
         newEstate.nbBedRoom = _nbBedRoom;
         newEstate.about = _about;
         newEstate.title = _title;
-        newEstate.streetName = _streetName;
+        newEstate.street = _street;
         newEstate.price = _price;
 
     }
