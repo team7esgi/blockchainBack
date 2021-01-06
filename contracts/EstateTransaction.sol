@@ -1,6 +1,14 @@
 pragma solidity ^0.4.0;
 
-contract EstateTransaction {
+import "./EstateFactory.sol";
+contract EstateTransaction is EstateFactory {
+
+
+    function buyEstate(){
+
+    }
+
+
     function EstateTransaction(){
 
     }
