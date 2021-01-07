@@ -10,7 +10,7 @@ contract EstateHelper is EstateFactory {
 
     function buyEstateById(uint estateId) external payable {
         require(msg.value == estates[estateId].price);
-        zombies[_zombieId].level++;
+        //Effectuer la transaction d'achat
     }
 
     function getEstatesByOwner(address _owner) external view returns(uint[] memory){
