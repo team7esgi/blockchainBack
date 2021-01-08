@@ -1,12 +1,9 @@
-pragma solidity ^0.4.0;
+pragma solidity >=0.4.22 <0.8.0;
+pragma experimental ABIEncoderV2;
 
 import "./EstateFactory.sol";
 
 contract EstateHelper is EstateFactory {
-
-    function EstateHelper(){
-
-    }
 
     function buyEstateById(uint estateId) external payable {
         require(msg.value == estates[estateId].price);

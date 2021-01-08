@@ -11,7 +11,7 @@ contract Escrow{
         _;
     }
 
-    constructor(){
+    constructor() public {
         agent = msg.sender;
     }
 
