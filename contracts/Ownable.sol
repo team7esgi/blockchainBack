@@ -1,9 +1,6 @@
-pragma solidity ^0.4.0;
+pragma solidity 0.8.0;
 
 contract Ownable {
-    function Ownable(){
-
-    }
 
     address private owner = msg.sender;
 
