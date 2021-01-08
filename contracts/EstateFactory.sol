@@ -1,4 +1,4 @@
-pragma solidity >=0.4.22 <0.8.0;
+pragma solidity 0.8.0;
 
 import "./Ownable.sol";
 pragma experimental ABIEncoderV2;
@@ -70,6 +70,7 @@ contract EstateFactory is Ownable {
         string memory _ville, 
         string memory _pays) internal {
 
+
         Estate memory newEstate;
 
         newEstate.surface = _surface;
@@ -82,8 +83,8 @@ contract EstateFactory is Ownable {
         newEstate.price = _price;
 
         //newEstate.others =;
-
-        uint idEstate = estates.push(newEstate) - 1;
+        estates.push(newEstate);
+        uint idEstate = estates.length;
         estateToOwner[idEstate] = msg.sender;
         ownerEstateCount[msg.sender]++;
         emit NewEstate(idEstate, _surface, _category, _nbRoom, _nbBedRoom, _about, _price, _title, _rue, _nom, _codePostale, _ville, _pays);
