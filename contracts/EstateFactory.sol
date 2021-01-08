@@ -33,6 +33,12 @@ contract EstateFactory is Ownable {
         string pays;
     }
 
+    Estate[] estates;
+
+    mapping (uint => address) public estateToOwner;
+
+    mapping ( address =>uint[] ) public OwnerToEstates;
+
     function createEstate( uint8  _surface, string memory  _category, uint8  _nbRoom, uint8 _nbBedRoom,
             string memory  _about, string memory  _title,
             Street memory _street, uint16 _price) internal {
@@ -49,6 +55,8 @@ contract EstateFactory is Ownable {
         newEstate.price = _price;
 
     }
+
+
 
 
 
