@@ -10,9 +10,10 @@ contract EstateHelper is EstateFactory {
         //Effectuer la transaction d'achat
     }
 
-    function getEstatesByOwner(address _owner) external view returns(uint[] memory){
+    /*function getEstatesByOwner(address _owner) external view returns(uint[] memory){
     uint[] memory result = new uint[](ownerEstateCount[_owner]);
     uint counter = 0;
+        //estates[] est vide
     for (uint i=0; i<estates.length; i++) {
         if (estateToOwner[i] == _owner) {
             result[counter] = i;
@@ -20,6 +21,6 @@ contract EstateHelper is EstateFactory {
         }
     }
     return result;
-    }
+    }*/
 
 }
