@@ -1,0 +1,25 @@
+{
+  "name": "blockchainback",
+  "version": "1.0.0",
+  "description": "projet blockchain esgi",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team7esgi/blockchainBack.git"
+  },
+  "author": "Team 7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team7esgi/blockchainBack/issues"
+  },
+  "homepage": "https://github.com/team7esgi/blockchainBack#readme",
+  "dependencies": {
+    "truffle-flattener": "^1.5.0"
+  }
+}
