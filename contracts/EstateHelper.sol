@@ -5,10 +5,10 @@ import "./EstateFactory.sol";
 
 contract EstateHelper is EstateFactory {
 
-    function buyEstateById(uint estateId) external payable {
+    /*function buyEstateById(uint estateId) external payable {
         require(msg.value == estates[estateId].price);
         //Effectuer la transaction d'achat
-    }
+    }*/
 
     /*function getEstatesByOwner(address _owner) external view returns(uint[] memory){
     uint[] memory result = new uint[](ownerEstateCount[_owner]);
